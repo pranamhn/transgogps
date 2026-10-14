@@ -8,9 +8,10 @@ import { SectionLabel } from "../../../components/ui";
 export default function HeroSection() {
   const { t } = useLang();
 
+  // Fills the first screen below the fixed header (main is already padded by --header-h).
   return (
-    <section className="bg-white border-b border-slate-100">
-      <div className="site-container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center pt-10 pb-14 lg:pt-16 lg:pb-20">
+    <section className="flex items-center min-h-[calc(100svh-var(--header-h))] bg-white border-b border-slate-100">
+      <div className="site-container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center py-8">
         <div>
           <SectionLabel>{t.hero.eyebrow}</SectionLabel>
 
@@ -42,7 +43,7 @@ export default function HeroSection() {
             </button>
           </div>
 
-          <dl className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-slate-200 pt-6">
+          <dl className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-slate-200 pt-6">
             {t.hero.facts.map((fact) => (
               <div key={fact.title}>
                 <dt className="text-sm font-semibold text-slate-900">{fact.title}</dt>

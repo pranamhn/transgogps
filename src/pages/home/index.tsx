@@ -6,7 +6,6 @@ import DevicesPreviewSection from "./components/DevicesPreviewSection";
 import IndustriesSection from "./components/IndustriesSection";
 import WorkflowSection from "./components/WorkflowSection";
 import PricingPreviewSection from "./components/PricingPreviewSection";
-import FaqSection from "./components/FaqSection";
 import { CtaBanner } from "../../components/ui";
 
 export default function HomePage() {
@@ -19,7 +18,6 @@ export default function HomePage() {
       <IndustriesSection />
       <WorkflowSection />
       <PricingPreviewSection />
-      <FaqSection />
       <CtaBanner />
     </div>
   );

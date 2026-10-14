@@ -113,7 +113,7 @@ const ID_TRANSLATIONS: Translations = {
     devices: "Perangkat GPS",
     solutions: "Solusi Armada",
     pricing: "Paket & Harga",
-    contact: "Kontak & Pasang",
+    contact: "Kontak",
     demoDashboard: "Demo Platform",
     waConsult: "Konsultasi WA",
   },

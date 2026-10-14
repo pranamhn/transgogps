@@ -41,7 +41,7 @@ export const NAVIGATION_ITEMS: NavItem[] = [
   { label: "Perangkat GPS", href: "/perangkat" },
   { label: "Solusi Armada", href: "/solusi" },
   { label: "Paket & Harga", href: "/harga" },
-  { label: "Kontak & Pasang", href: "/kontak" },
+  { label: "Kontak", href: "/kontak" },
 ];
 
 export interface GpsDevice {

@@ -39,13 +39,13 @@ export default function PricingPage() {
 
                 <div className="my-5 py-4 border-y border-slate-100">
                   <span className="text-xs font-semibold uppercase text-slate-400 block tracking-wider">
-                    Biaya Perangkat
+                    {plan.priceLabel ?? "Biaya Perangkat"}
                   </span>
-                  <div className="text-4xl font-black font-mono text-slate-900 mt-1">
+                  <div className={`${plan.priceDevice.startsWith("Rp") ? "text-4xl font-mono" : "text-2xl"} font-black text-slate-900 mt-1`}>
                     {plan.priceDevice}
                   </div>
                   <div className="text-sm text-blue-600 font-semibold mt-1">
-                    Langganan Server: {plan.serverFee}
+                    {plan.feeLabel ?? "Langganan Server"}: {plan.serverFee}
                   </div>
                 </div>
 
@@ -63,7 +63,7 @@ export default function PricingPage() {
 
                 <button
                   type="button"
-                  onClick={() => go("/kontak")}
+                  onClick={() => (plan.href ? window.open(plan.href, "_blank", "noopener") : go("/kontak"))}
                   className={`w-full py-3 px-4 rounded-xl text-sm font-bold transition-all mt-4 ${
                     plan.popular
                       ? "bg-blue-600 text-white hover:bg-blue-700 shadow-xs"

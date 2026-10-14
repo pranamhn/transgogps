@@ -11,6 +11,9 @@ export interface SectionHeaderProps {
   className?: string;
 }
 
+const titleClass = "text-3xl sm:text-4xl font-bold tracking-tight leading-tight text-slate-900 text-balance";
+const subtitleClass = "mt-3 text-base text-slate-600 leading-relaxed text-pretty";
+
 export function SectionHeader({
   label,
   icon,
@@ -27,8 +30,8 @@ export function SectionHeader({
       >
         <div>
           {label && <SectionLabel icon={icon}>{label}</SectionLabel>}
-          <h2 className="section-title mt-2">{title}</h2>
-          {subtitle && <p className="section-subtitle max-w-xl">{subtitle}</p>}
+          <h2 className={`mt-2 ${titleClass}`}>{title}</h2>
+          {subtitle && <p className={`${subtitleClass} max-w-xl`}>{subtitle}</p>}
         </div>
         <div className="self-start sm:self-auto shrink-0">{rightAction}</div>
       </div>
@@ -40,12 +43,12 @@ export function SectionHeader({
   return (
     <div
       className={`${
-        isLeft ? "text-left max-w-3xl" : "text-center max-w-2xl mx-auto"
-      } mb-14 ${className}`.trim()}
+        isLeft ? "text-left max-w-3xl" : "text-center max-w-4xl mx-auto"
+      } mb-12 ${className}`.trim()}
     >
       {label && <SectionLabel icon={icon}>{label}</SectionLabel>}
-      <h2 className="section-title mt-2">{title}</h2>
-      {subtitle && <p className="section-subtitle">{subtitle}</p>}
+      <h2 className={`mt-2 ${titleClass}`}>{title}</h2>
+      {subtitle && <p className={subtitleClass}>{subtitle}</p>}
     </div>
   );
 }

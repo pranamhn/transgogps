@@ -36,11 +36,11 @@ export default function PricingPreviewSection() {
               </div>
 
               <div className="my-4 py-3 border-y border-slate-100">
-                <div className="text-3xl font-black font-mono text-slate-900">
+                <div className={`${plan.priceDevice.startsWith("Rp") ? "text-3xl font-mono" : "text-2xl"} font-black text-slate-900`}>
                   {plan.priceDevice}
                 </div>
                 <div className="text-sm text-blue-600 font-semibold mt-1">
-                  Server: {plan.serverFee}
+                  {plan.feeLabel ?? "Server"}: {plan.serverFee}
                 </div>
               </div>
 
@@ -55,7 +55,7 @@ export default function PricingPreviewSection() {
 
               <button
                 type="button"
-                onClick={() => go("/kontak")}
+                onClick={() => (plan.href ? window.open(plan.href, "_blank", "noopener") : go("/kontak"))}
                 className={`w-full py-3 px-4 rounded-xl text-sm font-bold transition-all ${
                   plan.popular
                     ? "bg-blue-600 text-white hover:bg-blue-700 shadow-xs"

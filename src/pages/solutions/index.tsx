@@ -34,7 +34,7 @@ export default function SolutionsPage() {
         "Playback rute 90 hari untuk bukti riwayat penggunaan",
         "Aplikasi multi-user untuk staf operasional dan pemilik rental",
       ],
-      recommendedDevice: "Transgo OBD-II Plug & Play atau Micro 4G Pro",
+      recommendedDevice: "SEVA Fleet Management System",
     },
     {
       id: "logistics",
@@ -52,7 +52,7 @@ export default function SolutionsPage() {
         "Alarm batas kecepatan maksimal untuk menjaga keselamatan kargo",
         "Ekspor laporan jam operasional dan odometer perjalanan ke Excel",
       ],
-      recommendedDevice: "Transgo Heavy-Duty Pro IP67 + Ultrasonic Fuel Sensor",
+      recommendedDevice: "SEVA Fleet Management System",
     },
     {
       id: "ev",
@@ -63,14 +63,14 @@ export default function SolutionsPage() {
       problem:
         "Motor kurir rawan pencurian saat parkir di lokasi pengantaran, baterai drop di tengah jalan, dan kesulitan melacak puluhan rider kurir.",
       solution:
-        "Transgo Micro 4G dirancang khusus dengan rentang tegangan lebar hingga 90V DC sehingga dapat membaca langsung daya baterai motor listrik tanpa merusak sistem kelistrikan BMS.",
+        "GPS Tracker Motor GX-01 dengan protokol GT06 dan integrasi SEVA FMS memudahkan tracking lokasi real-time kurir, geofencing area operasional, serta remote cut-off jika motor terindikasi hilang.",
       benefits: [
-        "Tegangan aman 9V - 90V DC untuk Polytron, Maka, Smoot, Volta, dll.",
-        "Sensor getar pintar: sirene berbunyi saat motor digeser paksa saat parkir",
-        "Pemberitahuan sisa daya baterai dan peringatan low-battery",
+        "Akurasi pelacakan real-time melalui aplikasi mobile dan dashboard web",
+        "Sensor getar pintar: notifikasi saat motor digeser paksa saat parkir",
+        "Fitur remote engine cut-off untuk menghentikan motor dari jarak jauh",
         "Dukungan multi-kendaraan dalam satu peta monitoring operasional kurir",
       ],
-      recommendedDevice: "Transgo Micro 4G Tracker High-Voltage",
+      recommendedDevice: "GPS Tracker Motor GX-01 & SEVA FMS",
     },
     {
       id: "heavy",
@@ -81,14 +81,14 @@ export default function SolutionsPage() {
       problem:
         "Klaim sewa alat berat tidak sesuai jam operasional riil, unit dibawa keluar dari batas IUP tambang, dan kondisi lingkungan berdebu/ekstrim.",
       solution:
-        "Hardware IP67 tahan debu, air, dan getaran ekstrem. Pencatatan jam kerja mesin akurat untuk jadwal preventive maintenance berkala.",
+        "SEVA Fleet Management System menyajikan pencatatan Hour Meter mesin menyala vs diam secara transparan untuk audit penagihan sewa, didukung geofencing batas konsesi proyek.",
       benefits: [
         "Pencatatan Hour Meter mesin menyala vs diam untuk audit invoice sewa",
         "Geofence batas perimeter konsesi proyek / IUP tambang",
-        "Housing tahan banting bersertifikasi IP67 Waterproof & Dustproof",
-        "Dual external antenna untuk daya tangkap sinyal di pelosok daerah",
+        "Riwayat rute dan titik singgah unit di area proyek",
+        "Notifikasi anomali jam operasional langsung ke tim manajemen",
       ],
-      recommendedDevice: "Transgo Heavy-Duty Pro Industrial IP67",
+      recommendedDevice: "SEVA Fleet Management System",
     },
     {
       id: "coldchain",
@@ -99,14 +99,14 @@ export default function SolutionsPage() {
       problem:
         "Mesin pendingin reefer mati tanpa diketahui supir, menyebabkan ribuan produk beku, daging, atau obat-obatan rusak membusuk sebelum sampai tujuan.",
       solution:
-        "Transgo Cold-Chain IoT memadukan pelacak lokasi GPS dengan sensor temperatur berakurasi tinggi yang memicu alert seketika jika suhu keluar dari ambang batas aman.",
+        "SEVA Fleet Management System memantau pergerakan armada secara real-time, mempercepat estimasi tiba (ETA), serta mengelola penugasan supir dan kepatuhan SOP pengiriman.",
       benefits: [
-        "Sensor suhu digital rentang -40°C hingga +80°C",
-        "Alarm seketika via WhatsApp jika suhu naik melewati batas toleransi",
-        "Sensor magnetik buka-tutup pintu belakang box pendingin",
-        "Laporan audit kurva suhu lengkap untuk kepatuhan BPOM / HACCP",
+        "Live tracking pergerakan armada box reefer dari gudang hingga customer",
+        "ETA otomatis untuk koordinasi cepat saat bongkar muat kargo",
+        "Inspeksi kendaraan digital sebelum jalan via aplikasi SEVA Partner",
+        "Laporan kepatuhan rute dan riwayat perjalanan armada",
       ],
-      recommendedDevice: "Transgo Cold-Chain IoT Pro + Temperature Probe",
+      recommendedDevice: "SEVA Fleet Management System",
     },
   ];
 

@@ -51,6 +51,7 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
         <nav className="docked-nav-links" aria-label="Main navigation">
           {NAVIGATION_ITEMS.map((item) => {
             const isActive = currentRoute === item.href;
+            const label = t.nav[item.key] || item.label;
             return (
               <a
                 key={item.href}
@@ -61,7 +62,7 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
                 }}
                 className={`docked-nav-link ${isActive ? "active" : ""}`}
               >
-                <span>{item.label}</span>
+                <span>{label}</span>
               </a>
             );
           })}
@@ -142,6 +143,7 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
             <div className="mobile-drawer-links">
               {NAVIGATION_ITEMS.map((item) => {
                 const isActive = currentRoute === item.href;
+                const label = t.nav[item.key] || item.label;
                 return (
                   <button
                     key={item.href}
@@ -151,7 +153,7 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
                       isActive ? "mobile-nav-btn-active" : ""
                     }`}
                   >
-                    <span>{item.label}</span>
+                    <span>{label}</span>
                     <ArrowRight size={15} className="text-slate-400" />
                   </button>
                 );

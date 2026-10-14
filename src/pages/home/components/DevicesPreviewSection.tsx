@@ -2,7 +2,7 @@ import React from "react";
 import { Cpu, ArrowRight } from "lucide-react";
 import { useLang } from "../../../i18n";
 import { go } from "../../../hooks";
-import { GPS_DEVICES } from "../../../data";
+import { PRODUCTS } from "../../../data";
 import { FadeSection, SectionHeader } from "../../../components/ui";
 
 export default function DevicesPreviewSection() {
@@ -22,14 +22,14 @@ export default function DevicesPreviewSection() {
               onClick={() => go("/perangkat")}
               className="btn-outline self-start sm:self-auto shrink-0"
             >
-              <span>Semua Perangkat ({GPS_DEVICES.length})</span>
+              <span>Lihat Detail Produk</span>
               <ArrowRight size={14} />
             </button>
           }
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {GPS_DEVICES.map((d) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {PRODUCTS.map((d) => (
             <div key={d.id} className="device-card group">
               <div className="device-img-wrap">
                 <img src={d.image} alt={d.name} className="device-img" />
@@ -55,7 +55,7 @@ export default function DevicesPreviewSection() {
                     onClick={() => go("/perangkat")}
                     className="w-full py-2.5 px-3 rounded-lg bg-slate-50 text-slate-700 text-sm font-semibold hover:bg-blue-600 hover:text-white transition-all flex items-center justify-center gap-1.5"
                   >
-                    <span>Lihat Spesifikasi</span>
+                    <span>Lihat Detail</span>
                     <ArrowRight size={14} />
                   </button>
                 </div>

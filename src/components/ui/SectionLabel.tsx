@@ -2,15 +2,15 @@ import React from "react";
 
 export interface SectionLabelProps {
   children: React.ReactNode;
+  /** Kept for API compatibility; labels are plain text without an icon. */
   icon?: React.ReactNode;
   className?: string;
 }
 
-export function SectionLabel({ children, icon, className = "" }: SectionLabelProps) {
+export function SectionLabel({ children, className = "" }: SectionLabelProps) {
   return (
-    <div className={`section-label-chip ${className}`.trim()}>
-      {icon && <span className="section-label-icon">{icon}</span>}
-      <span>{children}</span>
-    </div>
+    <p className={`text-xs font-semibold uppercase tracking-wider text-blue-600 ${className}`.trim()}>
+      {children}
+    </p>
   );
 }

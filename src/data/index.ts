@@ -7,6 +7,7 @@ export type Route =
   | "/kontak";
 
 export type NavItem = {
+  key: "home" | "features" | "devices" | "solutions" | "pricing" | "contact";
   label: string;
   href: Route;
 };
@@ -36,136 +37,81 @@ export const CONTACT_INFO = {
 };
 
 export const NAVIGATION_ITEMS: NavItem[] = [
-  { label: "Beranda", href: "/" },
-  { label: "Fitur Platform", href: "/fitur" },
-  { label: "Perangkat GPS", href: "/perangkat" },
-  { label: "Solusi Armada", href: "/solusi" },
-  { label: "Paket & Harga", href: "/harga" },
-  { label: "Kontak", href: "/kontak" },
+  { key: "home", label: "Beranda", href: "/" },
+  { key: "features", label: "Fitur Platform", href: "/fitur" },
+  { key: "devices", label: "Produk", href: "/perangkat" },
+  { key: "solutions", label: "Solusi Armada", href: "/solusi" },
+  { key: "pricing", label: "Paket & Harga", href: "/harga" },
+  { key: "contact", label: "Kontak", href: "/kontak" },
 ];
 
-export interface GpsDevice {
+export interface Product {
   id: string;
   name: string;
   tagline: string;
-  category: "Motor / EV" | "Mobil & Rental" | "Truk & Alat Berat" | "Cold-Chain IoT";
+  category: string;
   image: string;
   badge: string;
   badgeColor: string;
-  specs: {
-    network: string;
-    accuracy: string;
-    voltage: string;
-    backupBattery: string;
-    features: string[];
-  };
+  description: string;
+  /** Spec rows shown on the product page; only confirmed facts. */
+  specs: { label: string; value: string }[];
+  features: string[];
   suitableFor: string[];
+  /** External product site; products without one are ordered via WhatsApp. */
+  website?: { href: string; label: string };
 }
 
-export const GPS_DEVICES: GpsDevice[] = [
+export const PRODUCTS: Product[] = [
   {
-    id: "tg-micro-4g",
-    name: "Transgo Micro 4G Tracker",
-    tagline: "Ultra-kompak untuk motor bensin & motor listrik (EV)",
-    category: "Motor / EV",
+    id: "gx-01",
+    name: "GPS Tracker Motor GX-01",
+    tagline: "Tingkatkan keamanan motor Anda dengan 1 tahun gratis server/aplikasi IOPGPS",
+    category: "GPS Tracker Motor",
     image: "/slides/slide-2-ev-2w.jpg",
-    badge: "Bestseller Motor",
+    badge: "Produk Baru",
     badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
-    specs: {
-      network: "4G LTE-M / 2G GSM Fallback",
-      accuracy: "< 2.5 meter (GNSS Quad-Band)",
-      voltage: "9V - 90V DC (Support Baterai EV)",
-      backupBattery: "180 mAh Li-Po Internal (Tahan hingga 4 jam)",
-      features: [
-        "Remote Engine Cut-Off (Relay Aman)",
-        "Waterproof IP65 Housing",
-        "Sensor Getar & Alarm Sabotase",
-        "Anti-Drain Aki Logic",
-      ],
-    },
-    suitableFor: [
-      "Motor Listrik (Polytron, Maka, Smoot, Volta)",
-      "Motor Matic & Sport Driver Ojol",
-      "Armada Kurir Last-Mile Delivery",
+    description:
+      "GPS Tracker Motor GX-01 adalah solusi keamanan kendaraan modern yang dilengkapi fitur matikan mesin jarak jauh. Perangkat ini telah memiliki izin resmi dari Kemenkominfo, dan dengan protokol GT06 yang andal, tracker ini memberikan perlindungan untuk motor kesayangan Anda.",
+    specs: [
+      { label: "Kendaraan", value: "Sepeda motor" },
+      { label: "Protokol", value: "GT06" },
+      { label: "Sertifikasi", value: "Izin resmi Kemenkominfo" },
+      { label: "Aplikasi", value: "IOPGPS, gratis server 1 tahun" },
     ],
+    features: [
+      "Matikan mesin jarak jauh",
+      "Pelacakan lokasi lewat aplikasi IOPGPS",
+      "Gratis 1 tahun server & aplikasi IOPGPS",
+      "Izin resmi Kemenkominfo",
+    ],
+    suitableFor: ["Motor pribadi", "Motor operasional usaha"],
   },
   {
-    id: "tg-obd2-smart",
-    name: "Transgo OBD-II Plug & Play",
-    tagline: "Instalasi instan 5 detik langsung ke port diagnostik mobil",
-    category: "Mobil & Rental",
+    id: "seva-fms",
+    name: "SEVA Fleet Management System",
+    tagline: "Satu platform terpadu untuk operasional armada & mobilitas bisnis Anda",
+    category: "Fleet Management System",
     image: "/slides/slide-1-fleet-4w.jpg",
-    badge: "Rental Favorite",
+    badge: "Platform Armada",
     badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
-    specs: {
-      network: "4G LTE Cat 1",
-      accuracy: "< 2 meter (GPS / Glonass / Galileo)",
-      voltage: "12V - 24V DC",
-      backupBattery: "140 mAh Rechargeable",
-      features: [
-        "Pemasangan Tanpa Potong Kabel (Zero Wiring)",
-        "Diagnostik Status Mesin (DTC Error Codes)",
-        "Notifikasi Pencabutan Soket Seketika",
-        "Sensor Pengereman Mendadak & Tabrakan",
-      ],
-    },
-    suitableFor: [
-      "Mobil Rental Harian & Bulanan (Avanza, Xpander, Innova)",
-      "Armada Taksi Online & Ride-Hailing",
-      "Mobil Operasional Perusahaan (Fleet)",
+    description:
+      "SEVA FMS adalah dashboard web untuk pemilik armada: pelacakan GPS dan geofencing, penugasan armada dan pengemudi, serta inspeksi dan invoice digital. Pengemudi terhubung lewat aplikasi SEVA Partner untuk menerima order, melakukan inspeksi pra-jalan digital, dan mencairkan saldo harian.",
+    specs: [
+      { label: "Platform", value: "Dashboard web (SEVA FMS)" },
+      { label: "Aplikasi pengemudi", value: "SEVA Partner, Android & iOS" },
+      { label: "Biaya awal", value: "Bebas biaya awal untuk pemilik armada" },
+      { label: "Situs", value: "sevaqu.com" },
     ],
-  },
-  {
-    id: "tg-heavy-pro",
-    name: "Transgo Heavy-Duty Pro",
-    tagline: "Telematika tangguh untuk truk kargo, tronton, dan alat berat",
-    category: "Truk & Alat Berat",
-    image: "/slides/slide-3-workshop-gps.jpg",
-    badge: "Industrial Grade",
-    badgeColor: "bg-amber-50 text-amber-700 border-amber-200",
-    specs: {
-      network: "4G LTE Global Band + External Dual Antenna",
-      accuracy: "< 1.5 meter (High-Gain Antenna)",
-      voltage: "9V - 36V Heavy-Duty Regulator",
-      backupBattery: "450 mAh High Capacity (Hingga 12 jam)",
-      features: [
-        "Sensor Bahan Bakar Ultrasonik (Anti-BBM Disedot)",
-        "Waterproof & Dustproof IP67",
-        "Sensor Suhu & Kelembaban Opsional",
-        "Buzzer Over-speeding & Panic Button SOS",
-      ],
-    },
-    suitableFor: [
-      "Truk Wingbox, Fuso & Trailer Kontainer",
-      "Dump Truck Tambang & Konstruksi",
-      "Excavator & Bulldozer Proyek",
+    features: [
+      "Live Tracking GPS & geofencing",
+      "Penugasan kendaraan & pengemudi",
+      "Inspeksi kendaraan digital",
+      "Konfirmasi & laporan pembayaran",
+      "Invoicing digital",
     ],
-  },
-  {
-    id: "tg-coldchain-iot",
-    name: "Transgo Cold-Chain IoT Pro",
-    tagline: "Monitoring posisi armada sekaligus temperatur kargo pendingin",
-    category: "Cold-Chain IoT",
-    image: "/slides/slide-4-investor.jpg",
-    badge: "FMCG & Pharma",
-    badgeColor: "bg-cyan-50 text-cyan-700 border-cyan-200",
-    specs: {
-      network: "4G LTE IoT M2M Dedicated",
-      accuracy: "< 2 meter",
-      voltage: "12V - 24V DC",
-      backupBattery: "600 mAh Industrial Grade",
-      features: [
-        "Sensor Suhu Presisi Tinggi (-40°C s/d +80°C)",
-        "Alert Pintu Terbuka (Door Sensor Magnetik)",
-        "Sertifikasi Kepatuhan Standar Farmasi & Makanan",
-        "Log Data Offline saat Hilang Sinyal Seluler",
-      ],
-    },
-    suitableFor: [
-      "Mobil Box Reefer & Pendingin Frozen Food",
-      "Distribusi Farmasi, Vaksin & Medis",
-      "Truk Pengantar Es Krim & Produk Segar",
-    ],
+    suitableFor: ["Pemilik armada", "Pengemudi mitra (SEVA Partner)"],
+    website: { href: "https://sevaqu.com", label: "Kunjungi sevaqu.com" },
   },
 ];
 
@@ -175,28 +121,31 @@ export interface PricingPlan {
   target: string;
   priceDevice: string;
   serverFee: string;
+  /** Overrides the default "Biaya Perangkat" / "Langganan Server" labels. */
+  priceLabel?: string;
+  feeLabel?: string;
   popular?: boolean;
   features: string[];
   cta: string;
+  /** External link for the CTA; defaults to the contact page. */
+  href?: string;
 }
 
 export const PRICING_PLANS: PricingPlan[] = [
   {
     id: "plan-motor",
-    name: "Paket Motor & EV",
-    target: "Sepeda motor pribadi, ojol, dan motor listrik",
-    priceDevice: "Rp 499.000",
-    serverFee: "Rp 35.000 / bln",
+    name: "Paket Motor GX-01",
+    target: "Sepeda motor pribadi dan motor operasional",
+    priceDevice: "Hubungi kami",
+    serverFee: "Gratis 1 tahun (IOPGPS)",
     features: [
-      "Perangkat Transgo Micro 4G Mini",
-      "Update lokasi tiap 10 detik",
-      "Remote Cut-Off (Matikan mesin via HP)",
-      "Gratis kuota internet kartu SIM 6 bulan",
-      "Riwayat rute perjalanan 60 hari",
-      "Aplikasi Android & iOS",
-      "Garansi resmi alat 1 tahun",
+      "Perangkat GPS Tracker Motor GX-01",
+      "Matikan mesin jarak jauh",
+      "Pelacakan lewat aplikasi IOPGPS",
+      "Gratis 1 tahun server & aplikasi IOPGPS",
+      "Izin resmi Kemenkominfo",
     ],
-    cta: "Pilih Paket Motor",
+    cta: "Pesan GX-01",
   },
   {
     id: "plan-mobil",
@@ -206,7 +155,6 @@ export const PRICING_PLANS: PricingPlan[] = [
     serverFee: "Rp 45.000 / bln",
     popular: true,
     features: [
-      "Perangkat Transgo OBD-II atau Hardwire Pro",
       "Update lokasi presisi tiap 10 detik",
       "Remote Engine Immobilizer seketika",
       "Gratis kuota kartu SIM M2M 1 tahun",
@@ -219,22 +167,23 @@ export const PRICING_PLANS: PricingPlan[] = [
     cta: "Pilih Paket Mobil (Populer)",
   },
   {
-    id: "plan-fleet",
-    name: "Paket Fleet Enterprise",
-    target: "Ekspedisi logistik, armada truk, dan alat berat",
-    priceDevice: "Hubungi Sales",
-    serverFee: "Custom Sesuai Jumlah Unit",
+    id: "plan-seva",
+    name: "SEVA Fleet Management",
+    target: "Pemilik armada yang mengelola kendaraan, pengemudi, dan pembayaran",
+    priceDevice: "Bebas biaya awal",
+    serverFee: "Hubungi kami",
+    priceLabel: "Biaya Awal",
+    feeLabel: "Langganan",
     features: [
-      "Perangkat Transgo Heavy-Duty Pro IP67",
-      "Sensor BBM ultrasonik & integrasi sensor",
-      "Playback rute 1 tahun & ekspor Excel / PDF",
-      "Multi-user dashboard & hak akses hierarki",
-      "Integrasi API / Webhook ke ERP internal",
-      "Dedicated Technical Account Manager",
-      "SLA Server Uptime 99.98%",
-      "Pelatihan operator fleet langsung di kantor Anda",
+      "Dashboard web SEVA FMS",
+      "Live Tracking GPS & geofencing",
+      "Penugasan kendaraan & pengemudi",
+      "Inspeksi kendaraan & invoice digital",
+      "Konfirmasi & laporan pembayaran",
+      "Aplikasi pengemudi SEVA Partner (Android & iOS)",
     ],
-    cta: "Konsultasi Paket Fleet",
+    cta: "Pelajari SEVA",
+    href: "https://sevaqu.com",
   },
 ];
 

@@ -59,17 +59,20 @@ export default function Footer() {
           <div className="footer-col-nav">
             <h4 className="footer-heading">{t.footer.quickLinks}</h4>
             <ul className="footer-link-list">
-              {NAVIGATION_ITEMS.map((item) => (
-                <li key={item.href}>
-                  <button
-                    type="button"
-                    onClick={() => handleNav(item.href)}
-                    className="footer-link-btn"
-                  >
-                    <span>{item.label}</span>
-                  </button>
-                </li>
-              ))}
+              {NAVIGATION_ITEMS.map((item) => {
+                const label = t.nav[item.key] || item.label;
+                return (
+                  <li key={item.href}>
+                    <button
+                      type="button"
+                      onClick={() => handleNav(item.href)}
+                      className="footer-link-btn"
+                    >
+                      <span>{label}</span>
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

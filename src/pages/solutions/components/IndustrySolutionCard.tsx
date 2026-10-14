@@ -12,7 +12,8 @@ export interface IndustrySolutionItem {
   problem: string;
   solution: string;
   benefits: string[];
-  recommendedDevice: string;
+  /** Real product that fits this industry; omitted when none does. */
+  recommendedDevice?: string;
 }
 
 export function IndustrySolutionCard({ sol }: { sol: IndustrySolutionItem }) {
@@ -67,10 +68,12 @@ export function IndustrySolutionCard({ sol }: { sol: IndustrySolutionItem }) {
 
           {/* Recommended device & CTA */}
           <div className="pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between gap-3">
-            <span className="text-xs text-slate-500">
-              Rekomendasi Alat:{" "}
-              <strong className="text-slate-800">{sol.recommendedDevice}</strong>
-            </span>
+            {sol.recommendedDevice && (
+              <span className="text-xs text-slate-500">
+                Rekomendasi Produk:{" "}
+                <strong className="text-slate-800">{sol.recommendedDevice}</strong>
+              </span>
+            )}
 
             <button
               type="button"

@@ -14,37 +14,14 @@ export interface Translations {
     waConsult: string;
   };
   hero: {
-    pill: string;
-    tagline: string;
-    title1: string;
-    titleHighlight: string;
-    title2: string;
+    eyebrow: string;
+    title: string;
     desc: string;
     ctaPrimary: string;
     ctaSecondary: string;
-    stat1Val: string;
-    stat1Label: string;
-    stat2Val: string;
-    stat2Label: string;
-    stat3Val: string;
-    stat3Label: string;
-    stat4Val: string;
-    stat4Label: string;
-  };
-  telematics: {
-    badge: string;
-    title: string;
-    sub: string;
-    vehicleStatus: string;
-    speed: string;
-    satellites: string;
-    battery: string;
-    fuel: string;
-    geofence: string;
-    engineActive: string;
-    engineCutOff: string;
-    testCutOffBtn: string;
-    restoreEngineBtn: string;
+    facts: { title: string; desc: string }[];
+    imageAlt: string;
+    imageCaption: string;
   };
   features: {
     label: string;
@@ -110,7 +87,7 @@ const ID_TRANSLATIONS: Translations = {
   nav: {
     home: "Beranda",
     features: "Fitur Platform",
-    devices: "Perangkat GPS",
+    devices: "Produk",
     solutions: "Solusi Armada",
     pricing: "Paket & Harga",
     contact: "Kontak",
@@ -118,47 +95,28 @@ const ID_TRANSLATIONS: Translations = {
     waConsult: "Konsultasi WA",
   },
   hero: {
-    pill: "TRANSGO GPS & IOT TELEMATIKA",
-    tagline: "Update 10 Detik • Remote Engine Cut-Off • Proteksi Anti-Maling 24/7",
-    title1: "Sistem Telematika GPS &",
-    titleHighlight: "Monitoring Armada Real-Time",
-    title2: "untuk Efisiensi Maksimal",
-    desc: "Pantau posisi setiap kendaraan, riwayat rute perjalanan, kecepatan aktual, konsumsi bahan bakar, dan status operasional armada Anda secara presisi dalam satu dashboard terpadu. Lindungi aset berharga dari risiko pencurian dan penyalahgunaan.",
-    ctaPrimary: "Coba Demo Dashboard",
-    ctaSecondary: "Konsultasi Teknisi (0811-1454-7322)",
-    stat1Val: "10 Detik",
-    stat1Label: "Update Posisi Satelit Presisi",
-    stat2Val: "< 3 Detik",
-    stat2Label: "Kecepatan Respon Engine Cut-Off",
-    stat3Val: "90 Hari",
-    stat3Label: "Penyimpanan Playback Rute",
-    stat4Val: "99.98%",
-    stat4Label: "Server Cloud Uptime Teruji",
-  },
-  telematics: {
-    badge: "SIMULATOR LIVE TELEMATIKA",
-    title: "Uji Coba Kontrol Jarak Jauh Langsung dari Layar Anda",
-    sub: "Lihat bagaimana sistem Transgo GPS merespons perintah remote engine cut-off seketika saat terjadi indikasi bahaya.",
-    vehicleStatus: "Status Kendaraan",
-    speed: "Kecepatan",
-    satellites: "Sinyal Satelit",
-    battery: "Baterai Unit",
-    fuel: "BBM / Daya",
-    geofence: "Zona Wilayah",
-    engineActive: "Mesin Beroperasi Normal",
-    engineCutOff: "MESIN TELAH DIMATIKAN (CUT-OFF AKTIF)",
-    testCutOffBtn: "Simulasi Matikan Mesin (Cut-Off)",
-    restoreEngineBtn: "Pulihkan Kelistrikan Mesin",
+    eyebrow: "GPS Tracker & Manajemen Armada",
+    title: "Lacak kendaraan Anda dan matikan mesinnya dari jauh.",
+    desc: "Transgo GPS menyediakan GPS Tracker Motor GX-01 untuk keamanan kendaraan, dan SEVA Fleet Management System untuk mengelola armada, pengemudi, dan pembayaran dalam satu dashboard.",
+    ctaPrimary: "Konsultasi via WhatsApp",
+    ctaSecondary: "Lihat produk",
+    facts: [
+      { title: "Matikan mesin jarak jauh", desc: "Hentikan motor dari aplikasi bila terjadi pencurian." },
+      { title: "Izin resmi Kemenkominfo", desc: "GX-01 memakai protokol GT06." },
+      { title: "Gratis 1 tahun server", desc: "Termasuk aplikasi pelacakan IOPGPS." },
+    ],
+    imageAlt: "Bengkel Armada & Telematika Transgo Group",
+    imageCaption: "Bengkel Armada & Telematika Transgo Group",
   },
   features: {
-    label: "FITUR UNGGULAN TELEMATIKA",
-    title: "Segala yang Anda Butuhkan untuk Kendali Penuh Armada",
-    sub: "Teknologi IoT canggih yang dirancang spesifik untuk kebutuhan rental mobil, ride-hailing, logistik, dan pemilik kendaraan pribadi.",
+    label: "Fitur",
+    title: "Yang bisa Anda lakukan dengan Transgo GPS",
+    sub: "Pantau lokasi kendaraan, matikan mesin dari jauh, dan kelola armada dari satu tempat.",
   },
   devices: {
-    label: "KATALOG PERANGKAT GPS",
-    title: "Hardware Bersertifikasi & Teruji Ketahanan Cuaca Ekstrim",
-    sub: "Pilihan unit GPS tracker 4G dengan modul satelit GNSS mutakhir, sensor sabotase, dan baterai cadangan internal.",
+    label: "PRODUK KAMI",
+    title: "GPS Tracker Motor & Sistem Manajemen Armada",
+    sub: "GPS Tracker Motor GX-01 dengan fitur matikan mesin jarak jauh, dan SEVA Fleet Management System untuk mengelola armada dan pengemudi.",
     specsTitle: "Spesifikasi Teknis:",
     suitableTitle: "Direkomendasikan Untuk:",
     consultBtn: "Konsultasi Pemasangan",
@@ -214,55 +172,36 @@ const EN_TRANSLATIONS: Translations = {
   nav: {
     home: "Home",
     features: "Features",
-    devices: "GPS Devices",
+    devices: "Products",
     solutions: "Fleet Solutions",
     pricing: "Pricing",
-    contact: "Contact & Install",
+    contact: "Contact",
     demoDashboard: "Live Demo",
     waConsult: "WhatsApp",
   },
   hero: {
-    pill: "TRANSGO GPS & IOT TELEMATICS",
-    tagline: "10-Sec Updates • Remote Engine Cut-Off • 24/7 Anti-Theft Security",
-    title1: "Advanced GPS Telematics &",
-    titleHighlight: "Real-Time Fleet Monitoring",
-    title2: "for Peak Operational Efficiency",
-    desc: "Monitor vehicle locations, historic routes, actual speed, fuel telemetry, and operational status in one unified dashboard. Protect your valuable mobility assets against theft, unauthorized route deviations, and misuse.",
-    ctaPrimary: "Explore Dashboard Demo",
-    ctaSecondary: "Talk to Telematics Engineer",
-    stat1Val: "10 Secs",
-    stat1Label: "Precision Satellite Refresh Rate",
-    stat2Val: "< 3 Secs",
-    stat2Label: "Remote Immobilizer Response Time",
-    stat3Val: "90 Days",
-    stat3Label: "Full Route Playback Storage",
-    stat4Val: "99.98%",
-    stat4Label: "High-Availability Server Uptime",
-  },
-  telematics: {
-    badge: "LIVE TELEMATICS SIMULATOR",
-    title: "Test Remote Vehicle Controls Directly on Your Screen",
-    sub: "Witness how Transgo GPS triggers instantaneous engine immobilizer commands when suspicious activities are detected.",
-    vehicleStatus: "Vehicle Status",
-    speed: "Speed",
-    satellites: "GNSS Lock",
-    battery: "Unit Battery",
-    fuel: "Fuel / Charge",
-    geofence: "Geofence Zone",
-    engineActive: "Engine Running Normally",
-    engineCutOff: "ENGINE IMMOBILIZED (CUT-OFF ACTIVE)",
-    testCutOffBtn: "Simulate Remote Engine Cut-Off",
-    restoreEngineBtn: "Restore Vehicle Ignition",
+    eyebrow: "GPS Trackers & Fleet Management",
+    title: "Track your vehicles and cut the engine remotely.",
+    desc: "Transgo GPS offers the GX-01 motorcycle GPS tracker for vehicle security, and the SEVA Fleet Management System for managing vehicles, drivers, and payments in one dashboard.",
+    ctaPrimary: "Chat on WhatsApp",
+    ctaSecondary: "See products",
+    facts: [
+      { title: "Remote engine cut-off", desc: "Stop the motorcycle from the app if it is stolen." },
+      { title: "Kemenkominfo certified", desc: "The GX-01 uses the GT06 protocol." },
+      { title: "1 year free server", desc: "Includes the IOPGPS tracking app." },
+    ],
+    imageAlt: "Transgo Group fleet and telematics workshop",
+    imageCaption: "Transgo Group fleet & telematics workshop",
   },
   features: {
-    label: "CORE TELEMATICS CAPABILITIES",
-    title: "Everything You Need for Total Fleet Command",
-    sub: "Enterprise-grade IoT telematics tailored for car rentals, ride-hailing drivers, freight logistics, and private vehicle owners.",
+    label: "Features",
+    title: "What you can do with Transgo GPS",
+    sub: "Track vehicle locations, cut the engine remotely, and manage your fleet from one place.",
   },
   devices: {
-    label: "HARDWARE CATALOG",
-    title: "Certified 4G GPS Trackers Built for Harsh Environments",
-    sub: "High-gain GNSS modules, anti-tampering sensors, and internal backup batteries engineered for automotive excellence.",
+    label: "OUR PRODUCTS",
+    title: "Motorcycle GPS Tracker & Fleet Management System",
+    sub: "The GX-01 motorcycle GPS tracker with remote engine cut-off, and the SEVA Fleet Management System for managing vehicles and drivers.",
     specsTitle: "Technical Specs:",
     suitableTitle: "Recommended For:",
     consultBtn: "Book Installation",

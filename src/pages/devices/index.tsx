@@ -2,9 +2,8 @@ import React from "react";
 import { Cpu, ShieldCheck, ArrowRight } from "lucide-react";
 import { go } from "../../hooks";
 import { PageHero } from "../../components/ui";
-import { GPS_DEVICES } from "../../data";
+import { PRODUCTS } from "../../data";
 import { DeviceDetailCard } from "./components/DeviceDetailCard";
-import { SpecsComparisonTable } from "./components/SpecsComparisonTable";
 
 export default function DevicesPage() {
   return (
@@ -12,22 +11,19 @@ export default function DevicesPage() {
       {/* Page Header */}
       <PageHero
         icon={<Cpu size={14} />}
-        label="KATALOG PERANGKAT GPS &amp; HARDWARE"
-        title="Perangkat Keras IoT 4G Bersertifikasi Resmi Kominfo"
-        subtitle="Hardware telematika tangguh berstandar otomotif internasional dengan modul GNSS multi-satelit dan sensor proteksi sabotase aki."
+        label="PRODUK TRANSGO GPS"
+        title="GPS Tracker & Sistem Manajemen Armada"
+        subtitle="GPS Tracker Motor GX-01 untuk keamanan kendaraan, dan SEVA Fleet Management System untuk mengelola armada, pengemudi, dan pembayaran dalam satu platform."
       />
 
       {/* Hardware Detail Cards */}
       <section className="py-16 bg-white">
         <div className="site-container space-y-12">
-          {GPS_DEVICES.map((dev) => (
+          {PRODUCTS.map((dev) => (
             <DeviceDetailCard key={dev.id} dev={dev} />
           ))}
         </div>
       </section>
-
-      {/* Comparison Specs Matrix Table */}
-      <SpecsComparisonTable />
 
       {/* Warranty & Installation Service */}
       <section className="py-16 bg-white border-t border-slate-100">

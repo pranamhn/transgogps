@@ -1,9 +1,9 @@
 import React from "react";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import { GpsDevice, CONTACT_INFO } from "../../../data";
+import { Product, CONTACT_INFO } from "../../../data";
 import { FadeSection } from "../../../components/ui";
 
-export function DeviceDetailCard({ dev }: { dev: GpsDevice }) {
+export function DeviceDetailCard({ dev }: { dev: Product }) {
   return (
     <FadeSection key={dev.id} className="device-detail-card">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -29,41 +29,25 @@ export function DeviceDetailCard({ dev }: { dev: GpsDevice }) {
             <p className="text-sm text-slate-600 mt-1">{dev.tagline}</p>
           </div>
 
-          {/* Tech Specs Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-3 border-y border-slate-100">
-            <div className="text-sm">
-              <span className="text-slate-400 block text-xs uppercase font-semibold">
-                Jaringan Seluler
-              </span>
-              <span className="font-bold text-slate-800">{dev.specs.network}</span>
-            </div>
-            <div className="text-sm">
-              <span className="text-slate-400 block text-xs uppercase font-semibold">
-                Akurasi Satelit
-              </span>
-              <span className="font-bold text-slate-800">{dev.specs.accuracy}</span>
-            </div>
-            <div className="text-sm">
-              <span className="text-slate-400 block text-xs uppercase font-semibold">
-                Rentang Tegangan
-              </span>
-              <span className="font-bold text-slate-800">{dev.specs.voltage}</span>
-            </div>
-            <div className="text-sm">
-              <span className="text-slate-400 block text-xs uppercase font-semibold">
-                Baterai Cadangan Internal
-              </span>
-              <span className="font-bold text-slate-800">{dev.specs.backupBattery}</span>
-            </div>
-          </div>
+          <p className="text-sm text-slate-700 leading-relaxed">{dev.description}</p>
+
+          {/* Spec rows */}
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-3 border-y border-slate-100">
+            {dev.specs.map((spec) => (
+              <div key={spec.label} className="text-sm">
+                <dt className="text-slate-400 text-xs uppercase font-semibold">{spec.label}</dt>
+                <dd className="font-bold text-slate-800">{spec.value}</dd>
+              </div>
+            ))}
+          </dl>
 
           {/* Features List */}
           <div>
             <h4 className="text-sm font-bold text-slate-900 mb-2">
-              Fitur Sensor &amp; Proteksi:
+              Fitur Utama:
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {dev.specs.features.map((f: string) => (
+              {dev.features.map((f) => (
                 <div key={f} className="flex items-center gap-2 text-sm text-slate-700">
                   <CheckCircle2 size={16} className="text-emerald-500 shrink-0" />
                   <span>{f}</span>
@@ -78,7 +62,7 @@ export function DeviceDetailCard({ dev }: { dev: GpsDevice }) {
               Sangat Cocok Untuk:
             </h4>
             <div className="flex flex-wrap gap-2">
-              {dev.suitableFor.map((app: string) => (
+              {dev.suitableFor.map((app) => (
                 <span
                   key={app}
                   className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200/60"
@@ -90,17 +74,23 @@ export function DeviceDetailCard({ dev }: { dev: GpsDevice }) {
           </div>
 
           {/* Actions */}
-          <div className="pt-4 flex items-center gap-3">
+          <div className="pt-4 flex flex-wrap items-center gap-3">
+            {dev.website && (
+              <a href={dev.website.href} target="_blank" rel="noreferrer" className="btn-primary text-xs">
+                <span>{dev.website.label}</span>
+                <ArrowRight size={14} />
+              </a>
+            )}
             <a
               href={`https://wa.me/${CONTACT_INFO.phoneRaw}?text=${encodeURIComponent(
-                `Halo Tim Transgo GPS, saya tertarik untuk konsultasi dan pemesanan perangkat ${dev.name}.`
+                `Halo Tim Transgo GPS, saya tertarik dengan ${dev.name}.`
               )}`}
               target="_blank"
               rel="noreferrer"
-              className="btn-primary text-xs"
+              className={`${dev.website ? "btn-outline" : "btn-primary"} text-xs`}
             >
-              <span>Pesan Unit / Jadwalkan Pasang</span>
-              <ArrowRight size={14} />
+              <span>Konsultasi via WhatsApp</span>
+              {!dev.website && <ArrowRight size={14} />}
             </a>
           </div>
         </div>

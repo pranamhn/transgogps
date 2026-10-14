@@ -17136,41 +17136,36 @@ button {
     radial-gradient(ellipse 75% 65% at 25% 25%, rgba(6, 182, 212, 0.16) 0%, transparent 70%),
     radial-gradient(ellipse 65% 55% at 85% 65%, rgba(30, 117, 255, 0.2) 0%, transparent 65%),
     linear-gradient(180deg, #060919 0%, #0B1333 55%, #0E1A45 100%);
-  padding: 56px 0 84px;
+  padding: 44px 0 60px;
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.hero-container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 16px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  align-items: center;
+@media (min-width: 1024px) {
+  .hero-section {
+    padding: 64px 0 80px;
+  }
 }
 
-@media (min-width: 640px) {
-  .hero-container {
-    padding: 0 24px;
-  }
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: center;
 }
 
 @media (min-width: 1024px) {
   .hero-container {
     grid-template-columns: 1.05fr 1fr;
     gap: 48px;
-    padding: 0 32px;
   }
 }
 
 .hero-badge-container {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
+  gap: 10px;
+  margin-bottom: 20px;
   flex-wrap: wrap;
 }
 
@@ -17178,48 +17173,48 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 16px;
+  padding: 6px 14px;
   background: rgba(6, 182, 212, 0.15);
   border: 1px solid rgba(6, 182, 212, 0.45);
   border-radius: 9999px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 750;
   color: #22D3EE;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   box-shadow: 0 0 16px rgba(6, 182, 212, 0.2);
 }
 
 .hero-tagline-text {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: #94A3B8;
   font-weight: 600;
   letter-spacing: 0.01em;
 }
 
 .hero-heading {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.1rem, 3.8vw, 3.4rem);
   font-weight: 850;
   color: #FFFFFF;
-  line-height: 1.14;
-  letter-spacing: -0.035em;
-  margin-bottom: 20px;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
 }
 
 .hero-desc {
-  font-size: 1.15rem;
-  color: #E2E8F0;
-  line-height: 1.65;
-  margin-bottom: 30px;
-  max-width: 580px;
+  font-size: 1.05rem;
+  color: #CBD5E1;
+  line-height: 1.62;
+  margin-bottom: 28px;
+  max-width: 540px;
 }
 
 .hero-actions {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
 .btn-hero-primary {

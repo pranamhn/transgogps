@@ -107,7 +107,7 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
           <button
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="mobile-toggle-btn text-white p-1.5 md:hidden"
+            className="mobile-toggle-btn text-slate-800 p-1.5 md:hidden"
             aria-label="Toggle Navigation Menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}

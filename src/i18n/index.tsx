@@ -125,7 +125,7 @@ const ID_TRANSLATIONS: Translations = {
     title2: "untuk Efisiensi Maksimal",
     desc: "Pantau posisi setiap kendaraan, riwayat rute perjalanan, kecepatan aktual, konsumsi bahan bakar, dan status operasional armada Anda secara presisi dalam satu dashboard terpadu. Lindungi aset berharga dari risiko pencurian dan penyalahgunaan.",
     ctaPrimary: "Coba Demo Dashboard",
-    ctaSecondary: "Konsultasi Teknisi (+62 821-1549-384)",
+    ctaSecondary: "Konsultasi Teknisi (0811-1454-7322)",
     stat1Val: "10 Detik",
     stat1Label: "Update Posisi Satelit Presisi",
     stat2Val: "< 3 Detik",

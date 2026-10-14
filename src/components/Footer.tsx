@@ -109,7 +109,7 @@ export default function Footer() {
           <div className="footer-col-contact">
             <h4 className="footer-heading">{t.footer.contactTitle}</h4>
 
-            <div className="space-y-3 text-xs text-slate-300">
+            <div className="space-y-3 text-sm text-slate-300">
               <div className="flex items-start gap-2.5">
                 <MapPin size={16} className="text-cyan-400 shrink-0 mt-0.5" />
                 <span>{CONTACT_INFO.workshopAddress}</span>
@@ -147,11 +147,11 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="footer-bottom-bar">
-          <p className="text-xs text-slate-400">
+          <p className="text-sm text-slate-400">
             © {new Date().getFullYear()} Transgo GPS. {t.footer.rights}
           </p>
 
-          <div className="flex items-center gap-4 text-xs text-slate-400">
+          <div className="flex items-center gap-4 text-sm text-slate-400">
             <span>
               {t.footer.partOf}{" "}
               <strong className="text-slate-200">Transgo Group Mobility</strong>

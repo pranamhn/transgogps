@@ -127,13 +127,13 @@ export default function SolutionsPage() {
 
                 <div className="flex-1 space-y-4">
                   <div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-blue-600 block">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 block">
                       {sol.tag}
                     </span>
-                    <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
                       {sol.title}
                     </h2>
-                    <p className="text-xs sm:text-sm text-slate-500 font-medium mt-0.5">
+                    <p className="text-sm text-slate-500 font-medium mt-1">
                       {sol.subtitle}
                     </p>
                   </div>
@@ -141,18 +141,18 @@ export default function SolutionsPage() {
                   {/* Problem & Solution Callout */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200/80">
                     <div>
-                      <span className="text-[10px] font-bold text-rose-600 uppercase tracking-wider block mb-1">
+                      <span className="text-xs font-bold text-rose-600 uppercase tracking-wider block mb-1">
                         Tantangan Utama
                       </span>
-                      <p className="text-xs text-slate-700 leading-relaxed">
+                      <p className="text-sm text-slate-700 leading-relaxed">
                         {sol.problem}
                       </p>
                     </div>
                     <div>
-                      <span className="text-[10px] font-bold text-emerald-600 uppercase tracking-wider block mb-1">
+                      <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider block mb-1">
                         Solusi Transgo GPS
                       </span>
-                      <p className="text-xs text-slate-700 leading-relaxed">
+                      <p className="text-sm text-slate-700 leading-relaxed">
                         {sol.solution}
                       </p>
                     </div>
@@ -160,11 +160,11 @@ export default function SolutionsPage() {
 
                   {/* Benefit Points */}
                   <div>
-                    <h4 className="text-xs font-bold text-slate-900 mb-2">Manfaat Nyata untuk Operasional:</h4>
+                    <h4 className="text-sm font-bold text-slate-900 mb-2">Manfaat Nyata untuk Operasional:</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {sol.benefits.map((b) => (
-                        <div key={b} className="flex items-start gap-2 text-xs text-slate-700">
-                          <CheckCircle2 size={15} className="text-emerald-500 shrink-0 mt-0.5" />
+                        <div key={b} className="flex items-start gap-2 text-sm text-slate-700">
+                          <CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />
                           <span>{b}</span>
                         </div>
                       ))}

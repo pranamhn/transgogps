@@ -50,44 +50,44 @@ export default function DevicesPage() {
                 {/* Specs Col */}
                 <div className="lg:col-span-7 space-y-4">
                   <div>
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-blue-600 block">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 block">
                       {dev.category}
                     </span>
-                    <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
                       {dev.name}
                     </h2>
-                    <p className="text-xs sm:text-sm text-slate-600 mt-1">
+                    <p className="text-sm text-slate-600 mt-1">
                       {dev.tagline}
                     </p>
                   </div>
 
                   {/* Tech Specs Grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-3 border-y border-slate-100">
-                    <div className="text-xs">
-                      <span className="text-slate-400 block text-[10px] uppercase font-bold">Jaringan Seluler</span>
-                      <span className="font-semibold text-slate-800">{dev.specs.network}</span>
+                    <div className="text-sm">
+                      <span className="text-slate-400 block text-xs uppercase font-semibold">Jaringan Seluler</span>
+                      <span className="font-bold text-slate-800">{dev.specs.network}</span>
                     </div>
-                    <div className="text-xs">
-                      <span className="text-slate-400 block text-[10px] uppercase font-bold">Akurasi Satelit</span>
-                      <span className="font-semibold text-slate-800">{dev.specs.accuracy}</span>
+                    <div className="text-sm">
+                      <span className="text-slate-400 block text-xs uppercase font-semibold">Akurasi Satelit</span>
+                      <span className="font-bold text-slate-800">{dev.specs.accuracy}</span>
                     </div>
-                    <div className="text-xs">
-                      <span className="text-slate-400 block text-[10px] uppercase font-bold">Rentang Tegangan</span>
-                      <span className="font-semibold text-slate-800">{dev.specs.voltage}</span>
+                    <div className="text-sm">
+                      <span className="text-slate-400 block text-xs uppercase font-semibold">Rentang Tegangan</span>
+                      <span className="font-bold text-slate-800">{dev.specs.voltage}</span>
                     </div>
-                    <div className="text-xs">
-                      <span className="text-slate-400 block text-[10px] uppercase font-bold">Baterai Cadangan Internal</span>
-                      <span className="font-semibold text-slate-800">{dev.specs.backupBattery}</span>
+                    <div className="text-sm">
+                      <span className="text-slate-400 block text-xs uppercase font-semibold">Baterai Cadangan Internal</span>
+                      <span className="font-bold text-slate-800">{dev.specs.backupBattery}</span>
                     </div>
                   </div>
 
                   {/* Features List */}
                   <div>
-                    <h4 className="text-xs font-bold text-slate-900 mb-2">Fitur Sensor &amp; Proteksi:</h4>
+                    <h4 className="text-sm font-bold text-slate-900 mb-2">Fitur Sensor &amp; Proteksi:</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {dev.specs.features.map((f) => (
-                        <div key={f} className="flex items-center gap-2 text-xs text-slate-700">
-                          <CheckCircle2 size={14} className="text-emerald-500 shrink-0" />
+                        <div key={f} className="flex items-center gap-2 text-sm text-slate-700">
+                          <CheckCircle2 size={16} className="text-emerald-500 shrink-0" />
                           <span>{f}</span>
                         </div>
                       ))}
@@ -96,10 +96,10 @@ export default function DevicesPage() {
 
                   {/* Suitable For */}
                   <div className="pt-2">
-                    <h4 className="text-xs font-bold text-slate-900 mb-1.5">Sangat Cocok Untuk:</h4>
-                    <div className="flex flex-wrap gap-1.5">
+                    <h4 className="text-sm font-bold text-slate-900 mb-1.5">Sangat Cocok Untuk:</h4>
+                    <div className="flex flex-wrap gap-2">
                       {dev.suitableFor.map((app) => (
-                        <span key={app} className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[11px] font-medium border border-slate-200/60">
+                        <span key={app} className="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-semibold border border-slate-200/60">
                           {app}
                         </span>
                       ))}

@@ -56,8 +56,8 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
 
           <div className="docked-live-badge hidden md:inline-flex">
             <span className="docked-live-dot" />
-            <Radio size={11} className="text-emerald-400" />
-            <span className="font-mono text-[11px] font-bold text-emerald-300">
+            <Radio size={12} className="text-emerald-400" />
+            <span className="font-mono text-xs font-bold text-emerald-300">
               4G LTE LIVE
             </span>
           </div>
@@ -84,7 +84,7 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
         </nav>
 
         {/* ── Right: Language & WhatsApp CTA ── */}
-        <div className="docked-right-cluster flex items-center gap-3">
+        <div className="docked-right-cluster flex items-center gap-2.5 shrink-0">
           {/* Lang Selector */}
           <div className="docked-lang-pill">
             <Globe size={13} className="text-slate-400 shrink-0" />
@@ -118,11 +118,11 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
             <span className="hidden sm:inline">{t.nav.waConsult}</span>
           </a>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Toggle (only on mobile) */}
           <button
             type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="mobile-toggle-btn text-white p-1.5"
+            className="mobile-toggle-btn text-white p-1.5 md:hidden"
             aria-label="Toggle Navigation Menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}

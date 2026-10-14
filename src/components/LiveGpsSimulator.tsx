@@ -155,7 +155,7 @@ export default function LiveGpsSimulator() {
 
       {/* Vehicle Selector Tabs */}
       <div className="px-4 py-2.5 bg-slate-950/60 border-b border-slate-800 flex items-center gap-2 overflow-x-auto">
-        <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 shrink-0 mr-1">
+        <span className="text-xs font-bold uppercase tracking-wider text-slate-400 shrink-0 mr-1">
           PILIH ARMADA:
         </span>
         {FLEET_VEHICLES.map((v) => {
@@ -166,13 +166,13 @@ export default function LiveGpsSimulator() {
               key={v.id}
               type="button"
               onClick={() => handleSelectVehicle(v)}
-              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold whitespace-nowrap transition-all ${
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold whitespace-nowrap transition-all ${
                 isActive
                   ? "bg-cyan-500/20 text-cyan-300 border border-cyan-400/40"
                   : "bg-slate-900/50 text-slate-400 border border-slate-800 hover:text-slate-200"
               }`}
             >
-              <Icon size={12} />
+              <Icon size={13} />
               <span>{v.plate}</span>
             </button>
           );
@@ -201,7 +201,7 @@ export default function LiveGpsSimulator() {
             </div>
             <div className="marker-tooltip">
               <span className="font-bold text-white">{selectedVehicle.plate} ({selectedVehicle.name})</span>
-              <span className="font-mono text-[10px] text-slate-300">
+              <span className="font-mono text-xs text-slate-300">
                 {engineCutOff ? "IGNITION CUT-OFF" : `${speed} km/h • Bergerak`}
               </span>
             </div>
@@ -215,7 +215,7 @@ export default function LiveGpsSimulator() {
                 {currentPoint.name}
               </span>
             </div>
-            <div className="font-mono text-[11px] text-cyan-300 mt-1">
+            <div className="font-mono text-xs text-cyan-300 mt-1">
               LAT: {currentPoint.lat} | LNG: {currentPoint.lng}
             </div>
           </div>
@@ -232,7 +232,7 @@ export default function LiveGpsSimulator() {
                 <ShieldCheck size={22} className="text-emerald-400" />
               )}
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider block opacity-75 text-slate-300">
+                <span className="text-xs font-semibold uppercase tracking-wider block opacity-85 text-slate-300">
                   {t.telematics.vehicleStatus}
                 </span>
                 <span className="text-xs font-bold font-mono text-white">
@@ -242,7 +242,7 @@ export default function LiveGpsSimulator() {
             </div>
 
             <div className="text-right">
-              <span className="text-[10px] text-slate-400 block">Kelistrikan Mesin</span>
+              <span className="text-xs text-slate-400 block">Kelistrikan Mesin</span>
               <span className={`text-xs font-mono font-bold ${engineCutOff ? "text-rose-400" : "text-emerald-400"}`}>
                 {engineCutOff ? "DISCONNECTED" : "ACC ON"}
               </span>
@@ -294,7 +294,7 @@ export default function LiveGpsSimulator() {
 
           {/* Remote Cut-Off Trigger Button */}
           <div className="mt-auto pt-2">
-            <div className="text-[11px] text-slate-400 mb-2 leading-tight">
+            <div className="text-xs text-slate-300 mb-2 leading-relaxed">
               {engineCutOff
                 ? "Mesin kendaraan saat ini dalam status terkunci. Klik tombol untuk mengaktifkan kembali."
                 : "Simulasi pemutusan arus mesin instan via relay cloud anti-maling Transgo."}

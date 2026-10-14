@@ -110,12 +110,12 @@ export default function HomePage() {
         <div className="hero-container">
           <div className="hero-content">
             {/* Pill & Tagline */}
-            <div className="hero-badge-row">
-              <span className="hero-pill">
+            <div className="hero-badge-container">
+              <span className="hero-badge-pill">
                 <Navigation size={13} className="text-cyan-400" />
                 <span>{t.hero.pill}</span>
               </span>
-              <span className="hero-tagline">{t.hero.tagline}</span>
+              <span className="hero-tagline-text">{t.hero.tagline}</span>
             </div>
 
             {/* Main Headline */}
@@ -305,12 +305,12 @@ export default function HomePage() {
                   <div className="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center">
                     {f.icon}
                   </div>
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200/80">
+                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200/80">
                     {f.badge}
                   </span>
                 </div>
-                <h3 className="text-base font-bold text-slate-900 mb-2">{f.title}</h3>
-                <p className="text-xs text-slate-600 leading-relaxed">{f.desc}</p>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{f.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -319,10 +319,10 @@ export default function HomePage() {
             <button
               type="button"
               onClick={() => go("/fitur")}
-              className="inline-flex items-center gap-2 text-xs font-bold text-blue-600 hover:text-blue-700 hover:underline"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 hover:underline"
             >
               <span>Pelajari Semua Fitur Platform Telematika</span>
-              <ArrowRight size={14} />
+              <ArrowRight size={15} />
             </button>
           </div>
         </div>
@@ -357,13 +357,13 @@ export default function HomePage() {
 
                 <div className="p-4 flex flex-col flex-1 justify-between">
                   <div>
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                    <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider block">
                       {d.category}
                     </span>
-                    <h3 className="text-sm font-bold text-slate-900 mt-1 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-base font-bold text-slate-900 mt-1 group-hover:text-blue-600 transition-colors">
                       {d.name}
                     </h3>
-                    <p className="text-[11px] text-slate-500 mt-1 line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-slate-500 mt-1 line-clamp-2 leading-relaxed">
                       {d.tagline}
                     </p>
                   </div>
@@ -372,10 +372,10 @@ export default function HomePage() {
                     <button
                       type="button"
                       onClick={() => go("/perangkat")}
-                      className="w-full py-2 px-3 rounded-lg bg-slate-50 text-slate-700 text-xs font-semibold hover:bg-blue-600 hover:text-white transition-all flex items-center justify-center gap-1.5"
+                      className="w-full py-2.5 px-3 rounded-lg bg-slate-50 text-slate-700 text-sm font-semibold hover:bg-blue-600 hover:text-white transition-all flex items-center justify-center gap-1.5"
                     >
                       <span>Lihat Spesifikasi</span>
-                      <ArrowRight size={13} />
+                      <ArrowRight size={14} />
                     </button>
                   </div>
                 </div>
@@ -401,11 +401,11 @@ export default function HomePage() {
                   {ind.icon}
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-blue-600 uppercase tracking-wider block">
+                  <span className="text-xs font-semibold text-blue-600 uppercase tracking-wider block">
                     {ind.tag}
                   </span>
-                  <h3 className="text-base font-bold text-slate-900 mt-1">{ind.title}</h3>
-                  <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">{ind.desc}</p>
+                  <h3 className="text-lg font-bold text-slate-900 mt-1">{ind.title}</h3>
+                  <p className="text-sm text-slate-600 mt-1.5 leading-relaxed">{ind.desc}</p>
                 </div>
               </div>
             ))}
@@ -427,23 +427,23 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="step-card">
               <span className="step-num-badge">01</span>
-              <h3 className="text-sm font-bold text-slate-900 mb-1.5">{t.howItWorks.step1Title}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{t.howItWorks.step1Desc}</p>
+              <h3 className="text-base font-bold text-slate-900 mb-1.5">{t.howItWorks.step1Title}</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">{t.howItWorks.step1Desc}</p>
             </div>
             <div className="step-card">
               <span className="step-num-badge">02</span>
-              <h3 className="text-sm font-bold text-slate-900 mb-1.5">{t.howItWorks.step2Title}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{t.howItWorks.step2Desc}</p>
+              <h3 className="text-base font-bold text-slate-900 mb-1.5">{t.howItWorks.step2Title}</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">{t.howItWorks.step2Desc}</p>
             </div>
             <div className="step-card">
               <span className="step-num-badge">03</span>
-              <h3 className="text-sm font-bold text-slate-900 mb-1.5">{t.howItWorks.step3Title}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{t.howItWorks.step3Desc}</p>
+              <h3 className="text-base font-bold text-slate-900 mb-1.5">{t.howItWorks.step3Title}</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">{t.howItWorks.step3Desc}</p>
             </div>
             <div className="step-card">
               <span className="step-num-badge">04</span>
-              <h3 className="text-sm font-bold text-slate-900 mb-1.5">{t.howItWorks.step4Title}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{t.howItWorks.step4Desc}</p>
+              <h3 className="text-base font-bold text-slate-900 mb-1.5">{t.howItWorks.step4Title}</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">{t.howItWorks.step4Desc}</p>
             </div>
           </div>
         </div>
@@ -471,23 +471,23 @@ export default function HomePage() {
                 )}
 
                 <div className="mb-4">
-                  <h3 className="text-lg font-bold text-slate-900">{plan.name}</h3>
-                  <p className="text-xs text-slate-500 mt-1">{plan.target}</p>
+                  <h3 className="text-xl font-bold text-slate-900">{plan.name}</h3>
+                  <p className="text-sm text-slate-500 mt-1">{plan.target}</p>
                 </div>
 
                 <div className="my-4 py-3 border-y border-slate-100">
-                  <div className="text-2xl font-black font-mono text-slate-900">
+                  <div className="text-3xl font-black font-mono text-slate-900">
                     {plan.priceDevice}
                   </div>
-                  <div className="text-xs text-blue-600 font-semibold mt-0.5">
+                  <div className="text-sm text-blue-600 font-semibold mt-1">
                     Server: {plan.serverFee}
                   </div>
                 </div>
 
                 <ul className="space-y-2.5 my-4 flex-1">
                   {plan.features.map((feat) => (
-                    <li key={feat} className="flex items-start gap-2 text-xs text-slate-700">
-                      <CheckCircle2 size={15} className="text-emerald-500 shrink-0 mt-0.5" />
+                    <li key={feat} className="flex items-start gap-2 text-sm text-slate-700">
+                      <CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -496,7 +496,7 @@ export default function HomePage() {
                 <button
                   type="button"
                   onClick={() => go("/kontak")}
-                  className={`w-full py-2.5 px-4 rounded-xl text-xs font-bold transition-all ${
+                  className={`w-full py-3 px-4 rounded-xl text-sm font-bold transition-all ${
                     plan.popular
                       ? "bg-blue-600 text-white hover:bg-blue-700 shadow-xs"
                       : "bg-slate-100 text-slate-800 hover:bg-slate-200"

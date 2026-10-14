@@ -16,7 +16,7 @@ export default function FloatingWhatsApp() {
           <div className="flex items-center justify-between pb-1.5 border-b border-slate-100">
             <div className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-[11px] font-bold text-slate-800">
+              <span className="text-xs font-bold text-slate-800">
                 Teknisi GPS Online
               </span>
             </div>
@@ -28,7 +28,7 @@ export default function FloatingWhatsApp() {
               <X size={14} />
             </button>
           </div>
-          <p className="text-[11px] text-slate-600 mt-1.5 leading-snug">
+          <p className="text-xs text-slate-600 mt-2 leading-relaxed">
             Butuh demo dashboard atau jadwal pasang ke lokasi Anda? Chat teknisi kami sekarang!
           </p>
         </div>

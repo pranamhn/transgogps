@@ -134,22 +134,22 @@ export default function FeaturesPage() {
                       <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
                         {feat.icon}
                       </div>
-                      <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
+                      <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
                         {feat.badge}
                       </span>
                     </div>
 
-                    <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-3">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">
                       {feat.title}
                     </h2>
 
-                    <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+                    <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
                       {feat.desc}
                     </p>
 
                     <div className="space-y-2.5">
                       {feat.highlights.map((item) => (
-                        <div key={item} className="flex items-start gap-2.5 text-xs text-slate-700 dark:text-slate-300">
+                        <div key={item} className="flex items-start gap-2.5 text-sm text-slate-700 dark:text-slate-300">
                           <CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </div>
@@ -160,10 +160,10 @@ export default function FeaturesPage() {
                       <button
                         type="button"
                         onClick={() => go("/kontak")}
-                        className="btn-primary text-xs"
+                        className="btn-primary text-sm"
                       >
                         <span>Jadwalkan Demo Fitur Ini</span>
-                        <ArrowRight size={14} />
+                        <ArrowRight size={15} />
                       </button>
                     </div>
                   </div>
@@ -174,29 +174,29 @@ export default function FeaturesPage() {
                         <span className="w-2.5 h-2.5 rounded-full bg-rose-400" />
                         <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
                         <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
-                        <span className="text-[10px] font-mono text-slate-400 ml-2">
+                        <span className="text-xs font-mono text-slate-400 ml-2">
                           transgogps.id/live-telematics
                         </span>
                       </div>
                       <div className="mockup-body">
                         <div className="p-4 space-y-3">
                           <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                            <span className="text-xs font-bold text-slate-800">{feat.title}</span>
-                            <span className="text-[10px] font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">
+                            <span className="text-sm font-bold text-slate-800">{feat.title}</span>
+                            <span className="text-xs font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">
                               CONNECTED
                             </span>
                           </div>
-                          <div className="grid grid-cols-2 gap-2 text-xs">
+                          <div className="grid grid-cols-2 gap-2 text-sm">
                             <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100">
-                              <span className="text-[10px] text-slate-400 block">Status Sinyal</span>
+                              <span className="text-xs text-slate-400 block font-semibold">Status Sinyal</span>
                               <span className="font-bold text-slate-800">4G LTE-M (99.8%)</span>
                             </div>
                             <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100">
-                              <span className="text-[10px] text-slate-400 block">Interval Update</span>
+                              <span className="text-xs text-slate-400 block font-semibold">Interval Update</span>
                               <span className="font-bold text-slate-800">Tiap 10 Detik</span>
                             </div>
                           </div>
-                          <p className="text-[11px] text-slate-500 italic">
+                          <p className="text-xs text-slate-500 italic">
                             *Fitur ini aktif otomatis pada seluruh varian perangkat Transgo GPS tanpa biaya setup tambahan.
                           </p>
                         </div>

@@ -4,7 +4,6 @@ import {
   X,
   PhoneCall,
   Globe,
-  Radio,
   ArrowRight,
   ShieldCheck,
 } from "lucide-react";
@@ -29,7 +28,7 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
       <div className="docked-ambient-bar" />
 
       <div className="docked-nav-container">
-        {/* ── Left: Brand & Telematics Status ── */}
+        {/* ── Left: Brand ── */}
         <div className="docked-brand-cluster">
           <a
             href="/"
@@ -40,12 +39,6 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
             className="docked-brand-link"
             title="Transgo GPS Telematics"
           >
-            <img
-              src="/logo-tgm-white.png"
-              alt="Transgo Group"
-              className="docked-logo-img"
-            />
-            <div className="docked-brand-divider" />
             <div className="flex flex-col">
               <span className="docked-brand-title">
                 TRANSGO <span>GPS</span>
@@ -53,14 +46,6 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
               <span className="docked-brand-sub">IoT Fleet Telematics</span>
             </div>
           </a>
-
-          <div className="docked-live-badge hidden md:inline-flex">
-            <span className="docked-live-dot" />
-            <Radio size={12} className="text-emerald-400" />
-            <span className="font-mono text-xs font-bold text-emerald-300">
-              4G LTE LIVE
-            </span>
-          </div>
         </div>
 
         {/* ── Center: Desktop Navigation Links ── */}

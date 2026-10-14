@@ -24,7 +24,7 @@ export default function RoiCalculator() {
 
   return (
     <section className="py-16 bg-slate-50 border-t border-slate-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <SectionLabel icon={<Calculator size={14} />}>
             KALKULATOR PENGHEMATAN ARMADA

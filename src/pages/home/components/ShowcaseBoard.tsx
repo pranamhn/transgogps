@@ -6,7 +6,7 @@ import { FadeSection, SectionLabel } from "../../../components/ui";
 export default function ShowcaseBoard() {
   return (
     <FadeSection className="py-16 bg-white dark:bg-slate-950 border-b border-slate-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="gps-board-clean">
           <div className="gps-board-media">
             <img

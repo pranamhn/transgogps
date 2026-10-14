@@ -4,7 +4,7 @@ import { ShieldCheck, Zap, Layers, Phone } from "lucide-react";
 export default function PricingStandards() {
   return (
     <section className="py-16 bg-white border-t border-slate-100">
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h3 className="text-xl font-bold text-slate-900">
             Standar Layanan yang Termasuk di Seluruh Paket

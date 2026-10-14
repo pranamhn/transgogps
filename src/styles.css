@@ -21,7 +21,7 @@
   --alt: #F8FAFC;
   --line: #E2E8F0;
   --header-h: 68px;
-  --max-w: 1160px;
+  --max-w: 1200px;
   --radius: 10px;
   --radius-lg: 16px;
   --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
@@ -131,9 +131,22 @@ button {
 
 /* ─── Layout Helpers ─────────────────────────────────────────────────────── */
 .container {
-  max-width: var(--max-w);
+  max-width: var(--max-w, 1200px);
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 16px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 32px;
+  }
 }
 
 .section {
@@ -14374,17 +14387,29 @@ button {
 
 /* Nav Inner Container */
 .docked-nav-container {
-  max-width: 1280px;
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   height: 70px;
-  padding: 0 24px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   flex-wrap: nowrap;
   transition: height 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (min-width: 640px) {
+  .docked-nav-container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .docked-nav-container {
+    padding: 0 32px;
+  }
 }
 
 .docked-navbar.scrolled .docked-nav-container {
@@ -17012,9 +17037,19 @@ button {
    TRANSGO GPS - EXTENSION & TELEMATICS DESIGN SYSTEM
    ═════════════════════════════════════════════════════════════════════════════ */
 
+.site-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .main-content {
   padding-top: var(--header-h, 70px);
   min-height: 100vh;
+  flex: 1;
+  width: 100%;
 }
 
 /* ─── Top Docked Navbar for Transgo GPS ────────────────────────────────── */
@@ -17107,16 +17142,27 @@ button {
 }
 
 .hero-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
 }
 
+@media (min-width: 640px) {
+  .hero-container {
+    padding: 0 24px;
+  }
+}
+
 @media (min-width: 1024px) {
   .hero-container {
     grid-template-columns: 1.05fr 1fr;
     gap: 48px;
+    padding: 0 32px;
   }
 }
 
@@ -17221,10 +17267,17 @@ button {
 
 .hero-stats-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   padding-top: 28px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+@media (min-width: 640px) {
+  .hero-stats-row {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
 }
 
 .hero-stat-card {
@@ -17775,6 +17828,71 @@ button {
   box-shadow: 0 20px 50px rgba(7, 11, 29, 0.25);
 }
 
+/* ─── CTA Banner ─────────────────────────────────────────────────────────── */
+.cta-banner-wrap {
+  padding: 56px 16px 80px;
+  background: var(--surface, #FFFFFF);
+}
+
+@media (min-width: 640px) {
+  .cta-banner-wrap {
+    padding: 64px 24px 96px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-banner-wrap {
+    padding: 72px 32px 100px;
+  }
+}
+
+.cta-banner-card {
+  max-width: var(--max-w, 1200px);
+  margin: 0 auto;
+  padding: 36px 20px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #070B1D 0%, #0F1A3D 50%, #172D6E 100%);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  box-shadow: 0 20px 50px rgba(7, 11, 29, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .cta-banner-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 44px 40px;
+    gap: 36px;
+  }
+}
+
+.cta-banner-text h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+}
+
+.cta-banner-text p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 580px;
+  line-height: 1.6;
+}
+
+.cta-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
 /* ─── Subpages Header ─────────────────────────────────────────────────────── */
 .subpage-hero {
   padding: 60px 0 44px;
@@ -17854,8 +17972,14 @@ button {
   background: #FFFFFF;
   border: 1px solid var(--line, #E2E8F0);
   border-radius: 18px;
-  padding: 34px;
+  padding: 24px 18px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+@media (min-width: 640px) {
+  .contact-card {
+    padding: 34px;
+  }
 }
 
 .form-header {
@@ -18084,9 +18208,22 @@ button {
 }
 
 .footer-container {
-  max-width: var(--max-w, 1160px);
+  max-width: var(--max-w, 1200px);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .footer-container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-container {
+    padding: 0 32px;
+  }
 }
 
 .footer-grid {

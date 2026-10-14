@@ -19,7 +19,7 @@ export default function DevicesPage() {
 
       {/* Hardware Detail Cards */}
       <section className="py-16 bg-white dark:bg-slate-950">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           {GPS_DEVICES.map((dev) => (
             <DeviceDetailCard key={dev.id} dev={dev} />
           ))}
@@ -31,7 +31,7 @@ export default function DevicesPage() {
 
       {/* Warranty & Installation Service */}
       <section className="py-16 bg-white border-t border-slate-100">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-50 text-emerald-600 mb-4">
             <ShieldCheck size={28} />
           </div>

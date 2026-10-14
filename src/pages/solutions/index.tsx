@@ -122,7 +122,7 @@ export default function SolutionsPage() {
 
       {/* Solutions Detail */}
       <section className="py-16 bg-white dark:bg-slate-950">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {industrySolutions.map((sol) => (
             <IndustrySolutionCard key={sol.id} sol={sol} />
           ))}
@@ -131,7 +131,7 @@ export default function SolutionsPage() {
 
       {/* ROI Banner */}
       <section className="py-16 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-blue-50 text-blue-600 mb-3">
             <TrendingUp size={24} />
           </div>

@@ -9,7 +9,7 @@ export default function FaqSection() {
 
   return (
     <FadeSection className="py-20 bg-white border-b border-slate-100">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           icon={<ShieldCheck size={14} />}
           label={t.faq.label}

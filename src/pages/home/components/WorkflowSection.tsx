@@ -8,7 +8,7 @@ export default function WorkflowSection() {
 
   return (
     <FadeSection className="py-20 bg-white border-b border-slate-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           icon={<Activity size={14} />}
           label={t.howItWorks.label}

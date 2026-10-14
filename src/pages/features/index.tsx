@@ -108,7 +108,7 @@ export default function FeaturesPage() {
 
       {/* Feature Deep Dive Grid */}
       <section className="py-16 bg-white dark:bg-slate-950">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {deepFeatures.map((feat, idx) => (
             <FeatureRow key={feat.id} feat={feat} isReversed={idx % 2 === 1} />
           ))}
@@ -117,7 +117,7 @@ export default function FeaturesPage() {
 
       {/* CTA Box */}
       <section className="py-16 bg-slate-50 border-t border-slate-200">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-xl font-bold text-slate-900 mb-2">
             Ingin Menguji Coba Seluruh Fitur Ini untuk Armada Anda?
           </h3>

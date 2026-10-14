@@ -62,7 +62,7 @@ export default function CoreFeaturesSection() {
   ];
 
   return (
-    <FadeSection className="py-20 bg-slate-50 dark:bg-slate-900 border-b border-slate-200">
+    <FadeSection className="py-20 bg-slate-50 border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeader
           icon={<Sparkles size={14} />}

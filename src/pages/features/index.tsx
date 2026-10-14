@@ -107,7 +107,7 @@ export default function FeaturesPage() {
       />
 
       {/* Feature Deep Dive Grid */}
-      <section className="py-16 bg-white dark:bg-slate-950">
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {deepFeatures.map((feat, idx) => (
             <FeatureRow key={feat.id} feat={feat} isReversed={idx % 2 === 1} />

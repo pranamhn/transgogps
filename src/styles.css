@@ -14792,8 +14792,14 @@ button {
   }
 
   .docked-nav-container {
-    padding: 0 20px;
+    padding: 0 16px;
     height: 62px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .docked-nav-container {
+    padding: 0 24px;
   }
 }
 
@@ -17741,12 +17747,54 @@ button {
   letter-spacing: 0.04em;
 }
 
-.workflow-step-card {
+.workflow-step-card,
+.step-card {
   background: #FFFFFF;
   border: 1px solid var(--line, #E2E8F0);
-  border-radius: 14px;
-  padding: 26px;
+  border-radius: 16px;
+  padding: 26px 22px;
   position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--blue-line, rgba(30, 117, 255, 0.35));
+  box-shadow: 0 10px 28px rgba(30, 117, 255, 0.08);
+}
+
+.step-num-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono, monospace);
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #1E75FF;
+  background: rgba(30, 117, 255, 0.08);
+  border: 1px solid rgba(30, 117, 255, 0.2);
+  border-radius: 8px;
+  padding: 4px 10px;
+  margin-bottom: 14px;
+}
+
+.industry-card {
+  background: #FFFFFF;
+  border: 1px solid var(--line, #E2E8F0);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--blue-line, rgba(30, 117, 255, 0.35));
+  box-shadow: 0 12px 30px rgba(30, 117, 255, 0.08);
 }
 
 .solution-clean-card {
@@ -17926,28 +17974,39 @@ button {
   min-height: 100vh;
 }
 
+.page-contact .page-hero,
 .page-hero {
-  padding: 60px 0 40px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+  border-bottom: 1px solid var(--line, #E2E8F0);
+  padding: 60px 0 44px;
   text-align: center;
+  position: relative;
+}
+
+.page-contact .page-hero::before,
+.page-hero::before {
+  display: none !important;
 }
 
 .page-hero-title {
-  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+  font-size: clamp(2.1rem, 4vw, 3.1rem);
   font-weight: 850;
+  color: var(--text-main, #0F172A) !important;
   margin: 12px 0 16px;
   letter-spacing: -0.025em;
+  line-height: 1.2;
 }
 
 .page-hero-desc {
   font-size: 1.1rem;
-  color: var(--text-muted, #475569);
-  max-width: 660px;
+  color: var(--text-muted, #475569) !important;
+  max-width: 680px;
   margin: 0 auto;
   line-height: 1.65;
 }
 
 .section-contact-body {
-  padding-bottom: 80px;
+  padding: 48px 0 80px;
 }
 
 .contact-grid {

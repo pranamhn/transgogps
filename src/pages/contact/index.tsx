@@ -11,7 +11,6 @@ export default function ContactPage() {
     <div className="page-contact">
       {/* Hero Header */}
       <PageHero
-        variant="page"
         label={lang === "id" ? "Konsultasi & Instalasi" : "Consultation & Booking"}
         title={
           lang === "id" ? (

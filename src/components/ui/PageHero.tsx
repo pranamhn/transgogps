@@ -17,22 +17,8 @@ export function PageHero({
   title,
   subtitle,
   children,
-  variant = "subpage",
   className = "",
 }: PageHeroProps) {
-  if (variant === "page") {
-    return (
-      <section className={`page-hero ${className}`.trim()}>
-        <div className="container">
-          <SectionLabel icon={icon}>{label}</SectionLabel>
-          <h1 className="page-hero-title mt-2">{title}</h1>
-          <p className="page-hero-desc">{subtitle}</p>
-          {children}
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section className={`subpage-hero ${className}`.trim()}>
       <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">

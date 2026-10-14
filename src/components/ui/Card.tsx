@@ -13,11 +13,11 @@ export function Card({
   ...props
 }: CardProps) {
   const variantMap: Record<string, string> = {
-    default: "bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/80 p-6 shadow-2xs",
+    default: "bg-white rounded-2xl border border-slate-200/80 p-6 shadow-2xs",
     feature: "feature-box-card",
     industry: "industry-card",
     step: "step-card",
-    clean: "bg-white dark:bg-slate-900 rounded-2xl border border-slate-100",
+    clean: "bg-white rounded-2xl border border-slate-100",
   };
 
   const baseClass = variantMap[variant] || variantMap.default;

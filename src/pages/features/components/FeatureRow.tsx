@@ -27,7 +27,7 @@ export function FeatureRow({
       >
         <div className={`lg:col-span-6 ${isReversed ? "lg:order-2" : "lg:order-1"}`}>
           <div className="flex items-center gap-2 mb-3">
-            <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center">
               {feat.icon}
             </div>
             <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">

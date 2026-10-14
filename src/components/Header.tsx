@@ -3,7 +3,6 @@ import {
   Menu,
   X,
   PhoneCall,
-  Globe,
   ArrowRight,
   ShieldCheck,
 } from "lucide-react";
@@ -72,7 +71,6 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
         <div className="docked-right-cluster flex items-center gap-2.5 shrink-0">
           {/* Lang Selector */}
           <div className="docked-lang-pill">
-            <Globe size={13} className="text-slate-400 shrink-0" />
             <button
               type="button"
               onClick={() => setLang("id")}
@@ -80,7 +78,6 @@ export default function Header({ currentRoute }: { currentRoute: Route }) {
             >
               ID
             </button>
-            <span className="text-slate-600 text-xs">|</span>
             <button
               type="button"
               onClick={() => setLang("en")}

@@ -14812,14 +14812,7 @@ button {
   }
 
   .docked-nav-container {
-    padding: 0 16px;
     height: 62px;
-  }
-}
-
-@media (min-width: 640px) and (max-width: 1024px) {
-  .docked-nav-container {
-    padding: 0 24px;
   }
 }
 
@@ -17109,29 +17102,37 @@ button {
 }
 
 .docked-lang-pill {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 4px 10px;
   background: #F1F5F9;
   border: 1px solid #E2E8F0;
   border-radius: 9999px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #475569;
+  padding: 2.5px;
+  gap: 2px;
 }
 
 .docked-lang-btn {
-  padding: 2px 6px;
-  border-radius: 4px;
+  padding: 3px 9px;
+  border-radius: 9999px;
+  font-size: 0.74rem;
+  font-weight: 700;
   color: #64748B;
   cursor: pointer;
-  transition: all 0.2s ease;
+  background: transparent;
+  border: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.docked-lang-btn:hover {
+  color: #0F172A;
 }
 
 .docked-lang-btn.active {
-  color: #FFFFFF;
-  background: #1E75FF;
+  color: #0F172A;
+  background: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .docked-cta-btn {
@@ -17347,11 +17348,22 @@ button {
 
 .telematics-header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  gap: 6px 12px;
   padding: 10px 16px;
   background: #050813;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Labels wrap as whole items when the card is narrow, never mid-label. */
+.telematics-header span {
+  white-space: nowrap;
+}
+
+.telematics-header .telematics-brand-badge {
+  flex-wrap: wrap;
 }
 
 .telematics-brand-badge {
@@ -17921,7 +17933,8 @@ button {
 }
 
 .cta-banner-card {
-  max-width: var(--max-w, 1200px);
+  /* Outer edge lines up with .site-container content at desktop gutters (32px each side). */
+  max-width: calc(var(--max-w, 1200px) - 64px);
   margin: 0 auto;
   padding: 36px 20px;
   border-radius: 24px;

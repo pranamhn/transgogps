@@ -3,25 +3,19 @@ import {
   Map,
   History,
   ShieldAlert,
-  BarChart3,
-  Smartphone,
-  Cpu,
-  Lock,
-  Radio,
-  CheckCircle2,
-  ArrowRight,
-  Database,
-  Code,
   Zap,
+  Lock,
   Activity,
-  Layers,
+  Code,
+  ArrowRight,
 } from "lucide-react";
 import { go } from "../../hooks";
-import { SectionLabel, FadeSection } from "../../components/ui";
+import { PageHero } from "../../components/ui";
 import { CONTACT_INFO } from "../../data";
+import { FeatureRow, DeepFeatureItem } from "./components/FeatureRow";
 
 export default function FeaturesPage() {
-  const deepFeatures = [
+  const deepFeatures: DeepFeatureItem[] = [
     {
       id: "live-map",
       icon: <Map size={24} className="text-blue-500" />,
@@ -105,108 +99,19 @@ export default function FeaturesPage() {
   return (
     <div className="subpage-wrap">
       {/* Page Header */}
-      <section className="subpage-hero">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <SectionLabel icon={<Zap size={14} />}>FITUR PLATFORM TELEMATIKA</SectionLabel>
-          <h1 className="subpage-title mt-2">
-            Platform Monitoring Armada Paling Lengkap &amp; Terintegrasi
-          </h1>
-          <p className="subpage-subtitle">
-            Kombinasi perangkat keras IoT berdaya tahan tinggi dengan sistem cloud cerdas untuk kendali operasional 100% transparan.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        icon={<Zap size={14} />}
+        label="FITUR PLATFORM TELEMATIKA"
+        title="Platform Monitoring Armada Paling Lengkap &amp; Terintegrasi"
+        subtitle="Kombinasi perangkat keras IoT berdaya tahan tinggi dengan sistem cloud cerdas untuk kendali operasional 100% transparan."
+      />
 
       {/* Feature Deep Dive Grid */}
       <section className="py-16 bg-white dark:bg-slate-950">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
-          {deepFeatures.map((feat, idx) => {
-            const isReversed = idx % 2 === 1;
-            return (
-              <FadeSection key={feat.id} className="feature-deep-row">
-                <div
-                  className={`grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${
-                    isReversed ? "lg:flex-row-reverse" : ""
-                  }`}
-                >
-                  <div className={`lg:col-span-6 ${isReversed ? "lg:order-2" : "lg:order-1"}`}>
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
-                        {feat.icon}
-                      </div>
-                      <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
-                        {feat.badge}
-                      </span>
-                    </div>
-
-                    <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">
-                      {feat.title}
-                    </h2>
-
-                    <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
-                      {feat.desc}
-                    </p>
-
-                    <div className="space-y-2.5">
-                      {feat.highlights.map((item) => (
-                        <div key={item} className="flex items-start gap-2.5 text-sm text-slate-700 dark:text-slate-300">
-                          <CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" />
-                          <span>{item}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="mt-6 pt-4 border-t border-slate-100">
-                      <button
-                        type="button"
-                        onClick={() => go("/kontak")}
-                        className="btn-primary text-sm"
-                      >
-                        <span>Jadwalkan Demo Fitur Ini</span>
-                        <ArrowRight size={15} />
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className={`lg:col-span-6 ${isReversed ? "lg:order-1" : "lg:order-2"}`}>
-                    <div className="feature-mockup-frame">
-                      <div className="mockup-top-bar">
-                        <span className="w-2.5 h-2.5 rounded-full bg-rose-400" />
-                        <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-                        <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
-                        <span className="text-xs font-mono text-slate-400 ml-2">
-                          transgogps.id/live-telematics
-                        </span>
-                      </div>
-                      <div className="mockup-body">
-                        <div className="p-4 space-y-3">
-                          <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                            <span className="text-sm font-bold text-slate-800">{feat.title}</span>
-                            <span className="text-xs font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">
-                              CONNECTED
-                            </span>
-                          </div>
-                          <div className="grid grid-cols-2 gap-2 text-sm">
-                            <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100">
-                              <span className="text-xs text-slate-400 block font-semibold">Status Sinyal</span>
-                              <span className="font-bold text-slate-800">4G LTE-M (99.8%)</span>
-                            </div>
-                            <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100">
-                              <span className="text-xs text-slate-400 block font-semibold">Interval Update</span>
-                              <span className="font-bold text-slate-800">Tiap 10 Detik</span>
-                            </div>
-                          </div>
-                          <p className="text-xs text-slate-500 italic">
-                            *Fitur ini aktif otomatis pada seluruh varian perangkat Transgo GPS tanpa biaya setup tambahan.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </FadeSection>
-            );
-          })}
+          {deepFeatures.map((feat, idx) => (
+            <FeatureRow key={feat.id} feat={feat} isReversed={idx % 2 === 1} />
+          ))}
         </div>
       </section>
 
@@ -220,7 +125,11 @@ export default function FeaturesPage() {
             Dapatkan akun demo gratis dan konsultasi paket GPS yang sesuai dengan jumlah unit kendaraan Anda.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <button type="button" onClick={() => go("/kontak")} className="btn-primary">
+            <button
+              type="button"
+              onClick={() => go("/kontak")}
+              className="btn-primary"
+            >
               <span>Konsultasi Demo Gratis</span>
               <ArrowRight size={15} />
             </button>
@@ -232,7 +141,7 @@ export default function FeaturesPage() {
               rel="noreferrer"
               className="btn-outline"
             >
-              <span>Chat WhatsApp (+62 821-1549-384)</span>
+              <span>Chat WhatsApp ({CONTACT_INFO.phone})</span>
             </a>
           </div>
         </div>

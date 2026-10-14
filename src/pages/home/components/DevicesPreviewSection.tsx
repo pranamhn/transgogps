@@ -10,7 +10,7 @@ export default function DevicesPreviewSection() {
 
   return (
     <FadeSection className="py-20 bg-white border-b border-slate-100">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="site-container">
         <SectionHeader
           icon={<Cpu size={14} />}
           label={t.devices.label}

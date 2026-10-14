@@ -11,7 +11,7 @@ export default function HeroSection() {
   return (
     <section className="hero-section">
       <div className="hero-background-glow" />
-      <div className="hero-container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="hero-container site-container">
         <div className="hero-content">
           {/* Pill & Tagline */}
           <div className="hero-badge-container">

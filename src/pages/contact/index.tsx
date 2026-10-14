@@ -32,7 +32,7 @@ export default function ContactPage() {
 
       {/* Main Grid: Form & Contact Info */}
       <FadeSection className="section-contact-body">
-        <div className="container">
+        <div className="site-container">
           <div className="contact-grid">
             <BookingForm />
             <ContactSidebar />

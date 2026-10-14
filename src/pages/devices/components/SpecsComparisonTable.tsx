@@ -5,7 +5,7 @@ import { SectionLabel } from "../../../components/ui";
 export function SpecsComparisonTable() {
   return (
     <section className="py-16 bg-slate-50 border-t border-slate-200">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="site-container">
         <div className="text-center mb-10">
           <SectionLabel icon={<FileCheck size={14} />}>
             PERBANDINGAN SPESIFIKASI

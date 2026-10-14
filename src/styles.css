@@ -132,20 +132,49 @@ button {
 /* ─── Layout Helpers ─────────────────────────────────────────────────────── */
 .container {
   max-width: var(--max-w, 1200px);
-  margin: 0 auto;
-  padding: 0 16px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
   width: 100%;
 }
 
 @media (min-width: 640px) {
   .container {
-    padding: 0 24px;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
   }
 }
 
 @media (min-width: 1024px) {
   .container {
-    padding: 0 32px;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+}
+
+/* Page content width shared by the header, every section and the footer:
+   1200px max with 16/24/32px gutters. Named apart from Tailwind's own `container`. */
+.site-container {
+  width: 100%;
+  max-width: var(--max-w, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 640px) {
+  .site-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-container {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
@@ -804,10 +833,7 @@ button {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: var(--max-w);
-  margin: 0 auto;
-  padding: 40px 32px 80px;
-  width: 100%;
+  min-width: 0;
 }
 
 .hero-grid {
@@ -13085,9 +13111,6 @@ button {
     margin-right: 24px;
   }
 
-  .hero-content {
-    padding: calc(var(--header-h) + 40px) 20px 56px;
-  }
 
   .biz-grid {
     gap: 10px;
@@ -13475,9 +13498,6 @@ button {
 }
 
 @media (max-width: 480px) {
-  .hero-content {
-    padding: calc(var(--header-h) + 24px) 18px 40px;
-  }
 
   .hero-h1 {
     font-size: clamp(1.85rem, 8.5vw, 2.3rem);
@@ -17162,7 +17182,7 @@ button {
 
 @media (min-width: 1024px) {
   .hero-container {
-    grid-template-columns: 1.05fr 1fr;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
     gap: 36px;
   }
 }

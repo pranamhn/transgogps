@@ -68,7 +68,7 @@ export const PRODUCTS: Product[] = [
     name: "GPS Tracker Motor GX-01",
     tagline: "Tingkatkan keamanan motor Anda dengan 1 tahun gratis server/aplikasi IOPGPS",
     category: "GPS Tracker Motor",
-    image: "/slides/slide-2-ev-2w.jpg",
+    image: "/slides/gx01-gps-tracker.jpg",
     badge: "Produk Baru",
     badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
     description:
@@ -92,7 +92,7 @@ export const PRODUCTS: Product[] = [
     name: "SEVA Fleet Management System",
     tagline: "Satu platform terpadu untuk operasional armada & mobilitas bisnis Anda",
     category: "Fleet Management System",
-    image: "/slides/slide-1-fleet-4w.jpg",
+    image: "/slides/seva-fleet-platform.jpg",
     badge: "Platform Armada",
     badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
     description:

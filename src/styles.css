@@ -17756,7 +17756,8 @@ button {
 
 .device-img-wrap {
   position: relative;
-  background: #090E1F;
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
   height: 190px;
   display: flex;
   align-items: center;
@@ -18485,7 +18486,8 @@ button {
 
 .device-detail-img-wrap {
   position: relative;
-  background: #090E1F;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
   border-radius: 14px;
   height: 260px;
   display: flex;

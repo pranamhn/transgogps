@@ -8,10 +8,9 @@ import { SectionLabel } from "../../../components/ui";
 export default function HeroSection() {
   const { t } = useLang();
 
-  // Fills the first screen below the fixed header (main is already padded by --header-h).
   return (
     <section className="flex items-center min-h-[calc(100svh-var(--header-h))] bg-white border-b border-slate-100">
-      <div className="site-container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center py-8">
+      <div className="site-container grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center py-10 lg:py-16">
         <div>
           <SectionLabel>{t.hero.eyebrow}</SectionLabel>
 
@@ -19,7 +18,9 @@ export default function HeroSection() {
             {t.hero.title}
           </h1>
 
-          <p className="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">{t.hero.desc}</p>
+          <p className="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
+            {t.hero.desc}
+          </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
             <a
@@ -28,7 +29,7 @@ export default function HeroSection() {
               )}`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700 transition-colors shadow-xs"
             >
               <MessageCircle size={16} />
               <span>{t.hero.ctaPrimary}</span>
@@ -43,7 +44,7 @@ export default function HeroSection() {
             </button>
           </div>
 
-          <dl className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-slate-200 pt-6">
+          <dl className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-slate-200 pt-6">
             {t.hero.facts.map((fact) => (
               <div key={fact.title}>
                 <dt className="text-sm font-semibold text-slate-900">{fact.title}</dt>
@@ -53,13 +54,15 @@ export default function HeroSection() {
           </dl>
         </div>
 
-        <figure>
+        <figure className="relative">
           <img
-            src="/slides/slide-3-workshop-gps.jpg"
+            src="/slides/hero-gps-telematics.jpg"
             alt={t.hero.imageAlt}
-            className="w-full aspect-[4/3] object-cover rounded-2xl"
+            className="w-full aspect-[4/3] object-cover rounded-2xl shadow-sm border border-slate-200/80"
           />
-          <figcaption className="mt-3 text-xs text-slate-500">{t.hero.imageCaption}</figcaption>
+          <figcaption className="mt-3 text-xs text-slate-500 text-center sm:text-left">
+            {t.hero.imageCaption}
+          </figcaption>
         </figure>
       </div>
     </section>

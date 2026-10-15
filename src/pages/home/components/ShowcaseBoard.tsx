@@ -10,8 +10,8 @@ export default function ShowcaseBoard() {
         <div className="gps-board-clean">
           <div className="gps-board-media">
             <img
-              src="/slides/slide-1-fleet-4w.jpg"
-              alt="Transgo GPS Fleet Telematics Monitoring"
+              src="/slides/seva-fleet-platform.jpg"
+              alt="SEVA Fleet Management Platform & Telematics Dashboard"
               className="gps-board-img"
             />
             <div className="gps-board-overlay" />

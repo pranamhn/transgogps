@@ -105,8 +105,8 @@ const ID_TRANSLATIONS: Translations = {
       { title: "Izin resmi Kemenkominfo", desc: "GX-01 memakai protokol GT06." },
       { title: "Gratis 1 tahun server", desc: "Termasuk aplikasi pelacakan IOPGPS." },
     ],
-    imageAlt: "Bengkel Armada & Telematika Transgo Group",
-    imageCaption: "Bengkel Armada & Telematika Transgo Group",
+    imageAlt: "Pusat monitoring dan sistem telematika GPS armada Transgo",
+    imageCaption: "Pusat monitoring & platform telematika armada Transgo GPS",
   },
   features: {
     label: "Fitur",
@@ -190,8 +190,8 @@ const EN_TRANSLATIONS: Translations = {
       { title: "Kemenkominfo certified", desc: "The GX-01 uses the GT06 protocol." },
       { title: "1 year free server", desc: "Includes the IOPGPS tracking app." },
     ],
-    imageAlt: "Transgo Group fleet and telematics workshop",
-    imageCaption: "Transgo Group fleet & telematics workshop",
+    imageAlt: "Transgo GPS fleet telematics and IoT monitoring center",
+    imageCaption: "Transgo GPS fleet telematics & IoT command platform",
   },
   features: {
     label: "Features",
